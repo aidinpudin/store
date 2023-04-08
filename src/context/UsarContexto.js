@@ -1,7 +1,26 @@
 import { useReducer } from "react"
-import axios from "axios";
 import Contexto from "./Contexto";
 import Reducer from "./Reducer"
+
+// Import the functions you need from the SDKs you need
+import { initializeApp } from "firebase/app";
+import {getDatabase, ref, onValue, push} from "firebase/database"
+
+// Your web app's Firebase configuration
+const firebaseConfig = {
+    apiKey: "AIzaSyAcIPb2oB8uaKz1Ac8RTYK_l2pihkVtOUA",
+    authDomain: "aidin-pudin.firebaseapp.com",
+    projectId: "aidin-pudin",
+    storageBucket: "aidin-pudin.appspot.com",
+    messagingSenderId: "256465140496",
+    appId: "1:256465140496:web:c3f1d5327731edcd08c395"
+};
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
+
+const db = getDatabase()
+const refProductos = ref(db,'productos/')
+const refCompras = ref(db,'compras')
 
 export default function UsarContexto(props) {
     const { children } = props
@@ -9,13 +28,16 @@ export default function UsarContexto(props) {
         productos:[],
         carrito:[],
     }
+
     const [state, dispatch] = useReducer(Reducer, estadoInicial)
+
     const listameProductos = async ()=>{
-        const res = await axios.get(
-            "https://devrockstore-default-rtdb.firebaseio.com/productos.json"
-            )
-            dispatch({type: "LISTAME_PRODUCTOS", payload: res.data})
-            console.log(res.data, "desde UsarContexto()")
+            onValue(refProductos, (snap)=>{
+                let data = snap.val()
+                console.log(data, 'desde firebase')
+                dispatch({type: "LISTAME_PRODUCTOS", payload: data})
+            })
+           // console.log(res.data, "desde UsarContexto()")
     }
     const agregarCarrito = (id) => {
         console.log('en agregarCarrito',id)

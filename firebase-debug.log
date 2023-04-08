@@ -1,0 +1,123 @@
+[debug] [2023-04-08T17:43:26.654Z] ----------------------------------------------------------------------
+[debug] [2023-04-08T17:43:26.655Z] Command:       /usr/local/bin/node /usr/local/bin/firebase deploy --only hosting
+[debug] [2023-04-08T17:43:26.655Z] CLI Version:   11.25.3
+[debug] [2023-04-08T17:43:26.656Z] Platform:      darwin
+[debug] [2023-04-08T17:43:26.656Z] Node Version:  v18.15.0
+[debug] [2023-04-08T17:43:26.656Z] Time:          Sat Apr 08 2023 14:43:26 GMT-0300 (Argentina Standard Time)
+[debug] [2023-04-08T17:43:26.656Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2023-04-08T17:43:26.688Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2023-04-08T17:43:26.688Z] > authorizing via signed-in user (rodriguezaidin@gmail.com)
+[debug] [2023-04-08T17:43:26.688Z] [iam] checking project aidin-pudin for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2023-04-08T17:43:26.689Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/aidin-pudin:testIamPermissions [none]
+[debug] [2023-04-08T17:43:26.689Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/aidin-pudin:testIamPermissions x-goog-quota-user=projects/aidin-pudin
+[debug] [2023-04-08T17:43:26.689Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/aidin-pudin:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2023-04-08T17:43:27.656Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/aidin-pudin:testIamPermissions 200
+[debug] [2023-04-08T17:43:27.657Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/aidin-pudin:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2023-04-08T17:43:27.658Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/aidin-pudin [none]
+[debug] [2023-04-08T17:43:28.034Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/aidin-pudin 200
+[debug] [2023-04-08T17:43:28.035Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/aidin-pudin {"projectId":"aidin-pudin","projectNumber":"256465140496","displayName":"aidin-Pudin","name":"projects/aidin-pudin","resources":{"hostingSite":"aidin-pudin","realtimeDatabaseInstance":"aidin-pudin-default-rtdb"},"state":"ACTIVE","etag":"1_899bdbad-96f5-4143-be43-fda2b9f70139"}
+[info] 
+[info] === Deploying to 'aidin-pudin'...
+[info] 
+[info] i  deploying hosting 
+[debug] [2023-04-08T17:43:28.042Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/pudin-store/versions [none]
+[debug] [2023-04-08T17:43:28.042Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/pudin-store/versions {"status":"CREATED","labels":{"deployment-tool":"cli-firebase"}}
+[debug] [2023-04-08T17:43:29.413Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/pudin-store/versions 500
+[debug] [2023-04-08T17:43:29.414Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/pudin-store/versions {"error":{"code":500,"message":"Internal error encountered.","status":"INTERNAL"}}
+[error] 
+[error] Error: HTTP Error: 500, Internal error encountered.
+[debug] [2023-04-08T17:43:29.529Z] Error Context: {
+  "body": {
+    "error": {
+      "code": 500,
+      "message": "Internal error encountered.",
+      "status": "INTERNAL"
+    }
+  },
+  "response": {
+    "statusCode": 500
+  }
+}
+[debug] [2023-04-08T17:46:51.816Z] ----------------------------------------------------------------------
+[debug] [2023-04-08T17:46:51.816Z] Command:       /usr/local/bin/node /usr/local/bin/firebase deploy --only hosting
+[debug] [2023-04-08T17:46:51.817Z] CLI Version:   11.25.3
+[debug] [2023-04-08T17:46:51.817Z] Platform:      darwin
+[debug] [2023-04-08T17:46:51.817Z] Node Version:  v18.15.0
+[debug] [2023-04-08T17:46:51.817Z] Time:          Sat Apr 08 2023 14:46:51 GMT-0300 (Argentina Standard Time)
+[debug] [2023-04-08T17:46:51.817Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2023-04-08T17:46:51.849Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2023-04-08T17:46:51.849Z] > authorizing via signed-in user (rodriguezaidin@gmail.com)
+[debug] [2023-04-08T17:46:51.849Z] [iam] checking project aidin-pudin for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2023-04-08T17:46:51.850Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/aidin-pudin:testIamPermissions [none]
+[debug] [2023-04-08T17:46:51.850Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/aidin-pudin:testIamPermissions x-goog-quota-user=projects/aidin-pudin
+[debug] [2023-04-08T17:46:51.850Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/aidin-pudin:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2023-04-08T17:46:52.877Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/aidin-pudin:testIamPermissions 200
+[debug] [2023-04-08T17:46:52.877Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/aidin-pudin:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2023-04-08T17:46:52.879Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/aidin-pudin [none]
+[debug] [2023-04-08T17:46:53.239Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/aidin-pudin 200
+[debug] [2023-04-08T17:46:53.239Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/aidin-pudin {"projectId":"aidin-pudin","projectNumber":"256465140496","displayName":"aidin-Pudin","name":"projects/aidin-pudin","resources":{"hostingSite":"aidin-pudin","realtimeDatabaseInstance":"aidin-pudin-default-rtdb"},"state":"ACTIVE","etag":"1_899bdbad-96f5-4143-be43-fda2b9f70139"}
+[info] 
+[info] === Deploying to 'aidin-pudin'...
+[info] 
+[info] i  deploying hosting 
+[debug] [2023-04-08T17:46:53.247Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/pudin-store/versions [none]
+[debug] [2023-04-08T17:46:53.247Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/pudin-store/versions {"status":"CREATED","labels":{"deployment-tool":"cli-firebase"}}
+[debug] [2023-04-08T17:46:54.529Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/pudin-store/versions 500
+[debug] [2023-04-08T17:46:54.530Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/pudin-store/versions {"error":{"code":500,"message":"Internal error encountered.","status":"INTERNAL"}}
+[error] 
+[error] Error: HTTP Error: 500, Internal error encountered.
+[debug] [2023-04-08T17:46:54.642Z] Error Context: {
+  "body": {
+    "error": {
+      "code": 500,
+      "message": "Internal error encountered.",
+      "status": "INTERNAL"
+    }
+  },
+  "response": {
+    "statusCode": 500
+  }
+}
+[debug] [2023-04-08T17:51:57.569Z] ----------------------------------------------------------------------
+[debug] [2023-04-08T17:51:57.570Z] Command:       /usr/local/bin/node /usr/local/bin/firebase deploy --only hosting
+[debug] [2023-04-08T17:51:57.570Z] CLI Version:   11.25.3
+[debug] [2023-04-08T17:51:57.570Z] Platform:      darwin
+[debug] [2023-04-08T17:51:57.570Z] Node Version:  v18.15.0
+[debug] [2023-04-08T17:51:57.570Z] Time:          Sat Apr 08 2023 14:51:57 GMT-0300 (Argentina Standard Time)
+[debug] [2023-04-08T17:51:57.571Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2023-04-08T17:51:57.603Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2023-04-08T17:51:57.603Z] > authorizing via signed-in user (rodriguezaidin@gmail.com)
+[debug] [2023-04-08T17:51:57.603Z] [iam] checking project aidin-pudin for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2023-04-08T17:51:57.604Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/aidin-pudin:testIamPermissions [none]
+[debug] [2023-04-08T17:51:57.604Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/aidin-pudin:testIamPermissions x-goog-quota-user=projects/aidin-pudin
+[debug] [2023-04-08T17:51:57.604Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/aidin-pudin:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2023-04-08T17:51:58.508Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/aidin-pudin:testIamPermissions 200
+[debug] [2023-04-08T17:51:58.508Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/aidin-pudin:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2023-04-08T17:51:58.510Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/aidin-pudin [none]
+[debug] [2023-04-08T17:51:58.922Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/aidin-pudin 200
+[debug] [2023-04-08T17:51:58.922Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/aidin-pudin {"projectId":"aidin-pudin","projectNumber":"256465140496","displayName":"aidin-Pudin","name":"projects/aidin-pudin","resources":{"hostingSite":"aidin-pudin","realtimeDatabaseInstance":"aidin-pudin-default-rtdb"},"state":"ACTIVE","etag":"1_899bdbad-96f5-4143-be43-fda2b9f70139"}
+[info] 
+[info] === Deploying to 'aidin-pudin'...
+[info] 
+[info] i  deploying hosting 
+[debug] [2023-04-08T17:51:58.929Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/pudin-store/versions [none]
+[debug] [2023-04-08T17:51:58.929Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/pudin-store/versions {"status":"CREATED","labels":{"deployment-tool":"cli-firebase"}}
+[debug] [2023-04-08T17:52:00.275Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/pudin-store/versions 500
+[debug] [2023-04-08T17:52:00.276Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/pudin-store/versions {"error":{"code":500,"message":"Internal error encountered.","status":"INTERNAL"}}
+[error] 
+[error] Error: HTTP Error: 500, Internal error encountered.
+[debug] [2023-04-08T17:52:00.387Z] Error Context: {
+  "body": {
+    "error": {
+      "code": 500,
+      "message": "Internal error encountered.",
+      "status": "INTERNAL"
+    }
+  },
+  "response": {
+    "statusCode": 500
+  }
+}
